@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Exercise Tracker | Free Code Camp</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+   </head>
+
+   <body class="container content">
+     <div class="columns is-mobile is-centered" style="margin-top:25px">
+       <div class="column is-7">
+         <div class="columns is-multiline">
+           <div class="column is-full">
+             <h1 class="">Exercise tracker</h1>
+           </div>
+           <div class="column is-half" style="display:flex;align-items: flex-end;">
+             <div class="notification">
+               <form action="/api/exercise/new-user" method="post">
+                 <h3>Create a New User</h3>
+                 <p><code>POST /api/exercise/new-user</code></p>
+                 <div class="field">
+                   <div class="control">
+                     <input id="uname" type="text" name="username" placeholder="username" class="input">
+                   </div>
+                 </div>
+                 <div class="field">
+                   <div class="control">
+                     <input type="submit" value="Submit" class="button is-fullwidth is-primary">
+                   </div>
+                 </div>
+               </form>
+             </div>
+           </div>
+           <div class="column is-half" style="display:flex">
+             <div class="notification">
+               <form action="/api/exercise/add" method="post">
+                 <h3>Add exercises</h3>
+                 <p><code>POST /api/exercise/add</code></p>
+                 <div class="field">
+                   <div class="control">
+                     <input id="uid" type="text" name="userId" placeholder="userId*" class="input">
+                   </div>
+                 </div>
+                 <div class="field">
+                   <div class="control">
+                     <input id="desc" type="text" name="description" placeholder="description*" class="input">
+                   </div>
+                 </div>
+                 <div class="field">
+                   <div class="control">
+                     <input id="dur" type="text" name="duration" placeholder="duration* (mins.)" class="input">
+                   </div>
+                 </div>
+                 <div class="field">
+                   <div class="control">
+                     <input id="dat" type="text" name="date" placeholder="date (yyyy-mm-dd)" class="input">
+                   </div>
+                 </div>
+                 <div class="field">
+                   <div class="control">
+                     <input type="submit" value="Submit" class="button is-fullwidth is-primary">
+                   </div>
+                 </div>
+               </form>
+             </div>
+           </div>
+           <div class="column is-full">
+             <p><strong>GET users's exercise log: </strong><code>GET /api/exercise/log?{userId}[&amp;from][&amp;to][&amp;limit]</code></p>
+             <p><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
+             <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </body>
+
+</html>
